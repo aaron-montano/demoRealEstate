@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+	{{>head}}
+
+	<body class="container">
+		<div id="header-wrapper">
+			<header id="header" class="container">
+				{{>logo}}
+				{{>nav}}
+			</header>
+		</div>
+
+        <div class="container">
+            <form method="POST" action="/login">
+                <div class="col-sm-8">
+                    <label>Email:</label>
+                    <input type="text" name="email" placeholder="Email Address"/>
+                </div>
+                <div class="col-sm-8">
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="password" />
+                </div>
+                <br />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+		{{>footer}}
+		{{>scripts}}
+	</body>
+
+</html>

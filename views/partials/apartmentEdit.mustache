@@ -1,0 +1,43 @@
+<section class="box feature" style="padding:1.5%;">
+	<div class="row">
+		<img alt="Thumb" src="/images/pic03.jpg"  style="positon:relative; top:50%; transform: tranlateY(-50%);"/>
+		<div class="col-sm-7">
+			<form action="/apartment/{{id}}" method="POST">
+				<div class="row">
+					<div class="col-sm-6">
+						<label>Unit Number:</label>
+						<input type="number" name="unitNumber" value="{{unitNumber}}" min="0"/>
+						<div class="col-sm-2">
+							<label>Price:</label>
+							<input type="number" name="price" value="{{price}}" />
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<label>Available:</label>
+						<input type="date" name="availability" value="{{availability}}" />	
+						<div class="row">	
+							<div class="col-sm-2">
+								<label>Bedrooms:</label>
+								<div class="input-number">
+									<input type="number" name="numBed" placeholder="{{numBed}}" min ="0" max ="10" />
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<label>Bathrooms:</label>
+								<div class="input-number">
+									<input type="number" name="numBath" placeholder="{{numBath}}" min = "1" max ="10" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<label>Apartment Description</label>
+						<textarea name="description">{{description}}</textarea>
+				</div>
+				<button type="submit">Save Changes</button>
+			</form>
+		</div>
+	</div>
+
+</section>

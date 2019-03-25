@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+	{{>head}}
+
+	<body class="container">
+		<div id="header-wrapper">
+			<header id="header" class="container">
+				{{>logo}}
+				{{>nav}}
+			<h1>
+				{{name}}
+				{{city}}
+				{{state}}
+			</h1>
+			</header>
+		</div>
+
+
+		{{#apartments}}
+			{{>apartmentEdit}}
+    	{{/apartments}}
+		<form action="/{{slug}}" method="post">
+			<input type="number" name="unitNumber" placeholder="unit number" />
+			<input type="number" name="numBed" placeholder="Num Beds"/>
+			<input type="number" name="numBath" placeholder="Num Baths"/>
+			<input type="date" name="availability" placeholder="availability"/>
+			<input type="number" name="price" placeholder="price"/>
+			<input type="text" name="description" placeholder="description"/>
+			<button type="submit">Create Apartment</button>
+		</form>
+	{{>footer}} {{>scripts}}
+	</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+	{{>head}}
+
+	<body class="container">
+		<div id="header-wrapper">
+			<header id="header" class="container">
+				{{>logo}}
+				{{>nav}}
+			</header>
+		</div>
+        <h3>ADMIN PORTAL</h3>
+        <div class="container">
+            <form method="POST" action="/user">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <label>First Name:</label>
+                        <input type="text" name="firstName" placeholder="first name" />
+                    </div>
+                    <div class="col-sm-8">
+                        <label>Last Name:</label>
+                        <input type="text" name="lastName" placeholder="last name" />
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class="col-sm-8">
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="password" />
+                </div>
+                <select name="accountType" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option value="tenant">Tenant</option>
+                    <option value="admin">Admin</option>
+                 </select>
+                <br />
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+
+		{{>footer}}
+		{{>scripts}}
+	</body>
+
+</html>
